@@ -1,0 +1,210 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "upperLine"
+				"maximumSize": &Dimension0 new java.awt.Dimension( 700, 250 )
+				"preferredSize": &Dimension1 new java.awt.Dimension( 700, 250 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "upper_leftLine"
+					"preferredSize": &Dimension2 new java.awt.Dimension( 350, 250 )
+					"maximumSize": &Dimension3 new java.awt.Dimension( 350, 250 )
+					"border": new javax.swing.border.TitledBorder( null, "播放清單", 4, 0, new java.awt.Font( "微軟正黑體", 0, 14 ), null )
+					"minimumSize": new java.awt.Dimension( 350, 250 )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"preferredSize": new java.awt.Dimension( 340, 225 )
+						"minimumSize": new java.awt.Dimension( 340, 225 )
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "playingList"
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"font": new java.awt.Font( "微軟正黑體", 0, 12 )
+							"preferredSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"minimumSize": new java.awt.Dimension( 340, 225 )
+							"maximumSize": new java.awt.Dimension( 340, 225 )
+							addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "select", true ) )
+						} )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "upper_rightLine"
+					"preferredSize": &Dimension4 new java.awt.Dimension( 350, 250 )
+					"maximumSize": &Dimension5 new java.awt.Dimension( 350, 250 )
+					"border": new javax.swing.border.TitledBorder( null, "曲目動作", 5, 0, new java.awt.Font( "微軟正黑體", 0, 14 ), null )
+					"minimumSize": new java.awt.Dimension( 350, 250 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 1
+					} ) {
+						name: "panel3"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "skipSong"
+							"text": "移除所選歌曲"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "skipSong", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"text": "移除全部歌曲"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeAllSongs", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button4"
+							"text": "亂序播放清單"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "shuffleSongs", true ) )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "bottomLine"
+				"maximumSize": #Dimension0
+				"preferredSize": #Dimension1
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "bottom_leftLine"
+					"preferredSize": #Dimension2
+					"maximumSize": #Dimension3
+					"border": new javax.swing.border.TitledBorder( null, "歌曲資訊", 4, 5, new java.awt.Font( "微軟正黑體", 0, 14 ), null )
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "info"
+						"text": "-"
+						"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"caretColor": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"editable": false
+						"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"autoscrolls": false
+						"focusable": false
+						"lineWrap": true
+						"preferredSize": new java.awt.Dimension( 340, 240 )
+						"minimumSize": new java.awt.Dimension( 340, 240 )
+						"maximumSize": new java.awt.Dimension( 340, 240 )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "bottom_rightLine"
+					"preferredSize": #Dimension4
+					"maximumSize": #Dimension5
+					"border": new javax.swing.border.TitledBorder( null, "播放器", 5, 5, new java.awt.Font( "微軟正黑體", 0, 14 ), null )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 1
+					} ) {
+						name: "para"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+							name: "panel4"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "songTitle"
+								"text": "SONG TITLE"
+								"autoscrolls": true
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JSlider" ) {
+							name: "songPlay"
+							"preferredSize": new java.awt.Dimension( 340, 50 )
+							"border": new javax.swing.border.TitledBorder( new javax.swing.border.EmptyBorder( 0, 0, 0, 0 ), "00:00/00:00", 1, 2 )
+							"value": 0
+							"maximum": 1000
+							"minimumSize": new java.awt.Dimension( 340, 50 )
+							"maximumSize": new java.awt.Dimension( 340, 50 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "songPlayStateChanged", true ) )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+							name: "panel5"
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "shuffle"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/shuffle.png" )
+								"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"contentAreaFilled": false
+								"focusPainted": false
+								"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"borderPainted": false
+								"preferredSize": &Dimension6 new java.awt.Dimension( 30, 30 )
+								"minimumSize": &Dimension7 new java.awt.Dimension( 30, 30 )
+								"maximumSize": &Dimension8 new java.awt.Dimension( 30, 36 )
+								"toolTipText": "打亂播放清單"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "shuffleActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "last10s"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/last.png" )
+								"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"contentAreaFilled": false
+								"focusPainted": false
+								"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"borderPainted": false
+								"preferredSize": #Dimension6
+								"minimumSize": #Dimension7
+								"maximumSize": #Dimension8
+								"toolTipText": "後退十秒"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "last10s", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "togglePlayStatus"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/pause.png" )
+								"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"contentAreaFilled": false
+								"focusPainted": false
+								"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"borderPainted": false
+								"preferredSize": #Dimension6
+								"minimumSize": #Dimension7
+								"maximumSize": #Dimension8
+								"toolTipText": "切換播放/暫停"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "togglePlayStatus", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "next10s"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/Next.png" )
+								"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"contentAreaFilled": false
+								"focusPainted": false
+								"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"borderPainted": false
+								"preferredSize": #Dimension6
+								"minimumSize": #Dimension7
+								"maximumSize": #Dimension8
+								"toolTipText": "前進十秒"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "next10s", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "loopToggle"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/noloop.png" )
+								"background": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"contentAreaFilled": false
+								"focusPainted": false
+								"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+								"borderPainted": false
+								"preferredSize": #Dimension6
+								"minimumSize": #Dimension7
+								"maximumSize": #Dimension8
+								"toolTipText": "循環播放"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "loopToggle", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JSlider" ) {
+								name: "slider1"
+								"preferredSize": new java.awt.Dimension( 130, 30 )
+								"border": new javax.swing.border.TitledBorder( new javax.swing.border.EmptyBorder( 3, 0, 0, 0 ), "音量", 1, 1 )
+								"value": 25
+								"foreground": new java.awt.Color( 0, 102, 0, 255 )
+								"minimumSize": new java.awt.Dimension( 130, 30 )
+								addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "volumeSet", true ) )
+							} )
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 690, 375 )
+		} )
+	}
+}

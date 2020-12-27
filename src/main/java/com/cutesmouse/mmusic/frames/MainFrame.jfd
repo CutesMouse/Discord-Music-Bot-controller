@@ -1,0 +1,75 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
+			name: "this"
+			"title": "Discord 音樂播放器"
+			"defaultCloseOperation": 3
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/icon.png" )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"preferredSize": new java.awt.Dimension( 450, 500 )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "servers"
+					"border": new javax.swing.border.TitledBorder( null, "選擇伺服器", 4, 0, new java.awt.Font( "微軟正黑體", 0, 20 ), null )
+					"minimumSize": new java.awt.Dimension( 450, 500 )
+					"maximumSize": new java.awt.Dimension( 450, 500 )
+					"font": new java.awt.Font( "微軟正黑體", 0, 16 )
+					"selectionMode": 0
+					addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "serversValueChanged", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"preferredSize": new java.awt.Dimension( 450, 500 )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "voiceChannels"
+					"font": new java.awt.Font( "微軟正黑體", 0, 16 )
+					"border": new javax.swing.border.TitledBorder( null, "選擇語音頻道", 4, 0, new java.awt.Font( "微軟正黑體", 0, 20 ), null )
+					"selectionMode": 0
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": " 播放 "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem2"
+						"text": "從檔案"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "playFromFile", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem3"
+						"text": "從YouTube/線上搜尋"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "playBySearch", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu2"
+					"text": " 伺服器播放設定 "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem1"
+						"text": "開啟設定視窗"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "openGuildSettingFrame", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+						name: "separator1"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem4"
+						"text": "重新整理伺服器列表"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "reloadServerList", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 925, 495 )
+		} )
+	}
+}
