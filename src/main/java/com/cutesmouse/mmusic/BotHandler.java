@@ -14,8 +14,6 @@ public class BotHandler {
             this.JDA = JDABuilder.createDefault(token).build().awaitReady();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } catch (LoginException e) {
-            e.printStackTrace();
         }
     }
 
